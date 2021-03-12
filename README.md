@@ -13,6 +13,17 @@ Pre-Req: create an IBM Cloud satellite location and download the attach script
 ```
 Pre-Req: setup the IBM Cloud terraform plugin, see https://github.com/IBM-Cloud/terraform-provider-ibm
 ```
+```
+# initialize terraform, do this once
+terraform init
+
+# useful terraform
+# use apply to apply changes, destroy to deprovision all the resources including the VPC
+terraform plan
+terraform apply
+terraform destroy
+
+```
 The Terraform orchestrates
 1. A VPC
 2. Public and private subnets in 3 IBM Cloud availability zones - only the public subnets are used in this code so far
@@ -21,6 +32,7 @@ The Terraform orchestrates
 
 ## 4. Run the attach scripts to connect to the IBM Cloud Satellite location
 ```
+# run these scripts to attach the hosts
 ./setup_sat_control_hosts.sh
 ./setup_sat_worker_hosts.sh
 ```
