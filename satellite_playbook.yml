@@ -1,0 +1,15 @@
+- name: Let's copy our executable script to remote location, execute script and get result back.
+  remote_user: root
+  hosts: satellite-group
+  tasks:
+     - name: Transfer executable script script
+       copy: src=attachHost-Satellite-demo.sh dest=/tmp/attach.sh
+
+     - name: Refresh the Red Hat packages
+       command: subscription-manager refresh
+
+     - name: Refresh the Red Hat packages
+       command: subscription-manager repos --enable=*
+
+     - name: Run the registration script on your machine
+       command: nohup bash /tmp/attach.sh &
