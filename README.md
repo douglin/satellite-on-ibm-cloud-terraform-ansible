@@ -11,7 +11,9 @@ Pre-Req: create an IBM Cloud satellite location and download the attach script
 
 ## 3. Setup and Run Terraform
 ```
-Pre-Req: setup the IBM Cloud terraform plugin, see https://github.com/IBM-Cloud/terraform-provider-ibm
+Pre-Req: setup Terraform and the IBM Cloud terraform plugin
+See https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider
+Note that the instructions for the IBM Cloud plugin differ if you are using Terraform 0.13x and newer versus older versions
 ```
 ```
 # initialize terraform, do this once
@@ -32,6 +34,10 @@ The Terraform orchestrates
 
 ## 4. Run the attach scripts to connect to the IBM Cloud Satellite location
 ```
+# replace <your SSH key> in the following key with the SSH key, e.g. something like "/Users/myuser/.ssh/id_rsa"
+setup_sat_control_hosts.sh
+setup_sat_worker_hosts.sh
+
 # run these scripts to attach the hosts
 ./setup_sat_control_hosts.sh
 ./setup_sat_worker_hosts.sh
