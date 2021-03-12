@@ -1,0 +1,5 @@
+#Terraform generated satellite-group
+[satellite-group]
+%{ for address in zone1_worker_ips ~}
+${address}
+%{ endfor ~}
