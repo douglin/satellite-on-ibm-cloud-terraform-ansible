@@ -1,0 +1,11 @@
+#Terraform generated satellite-group
+[satellite-group]
+%{ for address in zone1_control_ips ~}
+${address}
+%{ endfor ~}
+%{ for address in zone2_control_ips ~}
+${address}
+%{ endfor ~}
+%{ for address in zone3_control_ips ~}
+${address}
+%{ endfor ~}
