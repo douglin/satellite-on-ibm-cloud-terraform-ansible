@@ -11,14 +11,18 @@ Ansible to attach the deployed hosts to an IBM Cloud Satellite location
 ## 1. Add your credentials to terrform.tfvars
 
 ## 2. Specify variables in variables.tf like the IBM Cloud resource group and attach script for your satellite location
+,,,
 Pre-Req: create an IBM Cloud satellite location and download the attach script
+,,,
 
 ## 3. Setup and Run Terraform
 Pre-Req: setup the IBM Cloud terraform plugin, see https://github.com/IBM-Cloud/terraform-provider-ibm
 
 ## 4. Run the attach scripts to connect to the IBM Cloud Satellite location
+,,,
 ./setup_sat_control_hosts.sh
 ./setup_sat_worker_hosts.sh
+,,,
 
 ## 5. Wait a minute or so and the hosts will show up in IBM Cloud Satellte
 
