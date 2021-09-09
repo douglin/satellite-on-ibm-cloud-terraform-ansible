@@ -37,7 +37,7 @@ The Terraform orchestrates
 # either rename the Satellite attach script to "attachHost-Satellite-demo.sh" or
 # edit satellite_playbook.yml and replace "attachHost-Satellite-demo.sh" with the name of the script that you want to use
 
-# replace <your SSH key> in the following key with the SSH key, e.g. something like "/Users/myuser/.ssh/id_rsa"
+# replace <your SSH key> in the following files with the SSH key, e.g. something like "/Users/myuser/.ssh/id_rsa"
 setup_sat_control_hosts.sh
 setup_sat_worker_hosts.sh
 
